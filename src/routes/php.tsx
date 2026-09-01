@@ -250,16 +250,19 @@ function PhpNetworkPage() {
                         "Symfony",
                         "Laravel",
                         "Architecture",
+                        "Full-stack",
                         "Platform",
                         "DevOps",
                         "Modernisation",
                         "Technical Leadership",
-                      ].map((spec, i) => (
+                        "WordPress",
+                        "Drupal",
+                      ].map((spec) => (
                         <span
                           key={spec}
                           className="bh-chip"
                           style={
-                            i === 3
+                            spec === "Architecture" || spec === "Full-stack"
                               ? {
                                   borderColor: "var(--blue)",
                                   color: "var(--blue-bright)",
