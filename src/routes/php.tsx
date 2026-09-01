@@ -185,7 +185,9 @@ function PhpNetworkPage() {
               <p className="bh-eyebrow">02 / Classification</p>
               <h2 className="bh-h2">Know where you stand.</h2>
               <p className="bh-lead max-w-[52ch]">
-                We don't put every PHP developer into the same bucket.
+                We don't put every PHP developer into the same bucket. You're ranked by seniority,
+                technical specialism and real-world experience — so you're matched with opportunities
+                appropriate to your level and expertise.
               </p>
             </div>
 
