@@ -296,11 +296,11 @@ function PhpNetworkPage() {
               <p className="bh-eyebrow">03 / Representation</p>
               <h2 className="bh-h2">Be represented by people who understand PHP.</h2>
               <p className="bh-lead max-w-[50ch]">
-                Not generic recruiters. Practitioners who have shipped PHP in production.
-              </p>
-              <div className="mt-10">
-                <Cta />
-              </div>
+              You've spent years building your expertise. Be represented by people who know what it's worth.
+            </p>
+            <div className="mt-10">
+              <Cta />
+            </div>
             </div>
 
             <div className="bh-panel relative overflow-hidden p-10 text-center md:p-16">
