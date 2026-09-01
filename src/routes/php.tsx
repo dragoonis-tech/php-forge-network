@@ -175,14 +175,119 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 3. People who understand PHP */}
+        {/* 3. Know where you stand */}
         <section
           className="bh-section border-t"
           style={{ borderColor: "var(--line)", background: "var(--ink-2)" }}
         >
+          <div className="bh-container">
+            <div className="max-w-[900px]">
+              <p className="bh-eyebrow">02 / Classification</p>
+              <h2 className="bh-h2">Know where you stand.</h2>
+              <p className="bh-lead max-w-[52ch]">
+                We don't put every PHP developer into the same bucket.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 lg:grid-cols-[.38fr_.62fr]">
+              <div className="bh-panel flex flex-col justify-center p-7 md:p-10">
+                <p className="bh-label mb-6">Typical classification</p>
+                <div className="inline-flex">
+                  <span
+                    className="border px-5 py-3 font-mono text-[18px] tracking-[0.05em] text-muted-ink line-through"
+                    style={{ borderColor: "var(--line)" }}
+                  >
+                    PHP Developer
+                  </span>
+                </div>
+                <p className="mt-8 text-[16px] text-muted-ink">
+                  One label for every level, every specialism, every career stage.
+                </p>
+              </div>
+
+              <div
+                className="bh-panel p-7 md:p-10"
+                style={{ borderColor: "var(--line-hi)" }}
+              >
+                <p className="bh-label mb-8 text-blue-bright">How ByteHire sees you</p>
+
+                <div className="space-y-9">
+                  <div>
+                    <p className="mb-4 font-mono text-[13px] tracking-[0.12em] text-soft uppercase">
+                      Seniority
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      {["Mid-level", "Senior", "Lead", "Principal", "Architect"].map((level, i) => (
+                        <span
+                          key={level}
+                          className="bh-chip"
+                          style={
+                            i === 1
+                              ? {
+                                  borderColor: "var(--blue)",
+                                  color: "var(--blue-bright)",
+                                  background: "rgba(0, 169, 244, 0.10)",
+                                }
+                              : undefined
+                          }
+                        >
+                          {level}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="mb-4 font-mono text-[13px] tracking-[0.12em] text-soft uppercase">
+                      Specialism
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "Backend",
+                        "Symfony",
+                        "Laravel",
+                        "Architecture",
+                        "Platform",
+                        "DevOps",
+                        "Modernisation",
+                        "Technical Leadership",
+                      ].map((spec, i) => (
+                        <span
+                          key={spec}
+                          className="bh-chip"
+                          style={
+                            i === 3
+                              ? {
+                                  borderColor: "var(--blue)",
+                                  color: "var(--blue-bright)",
+                                  background: "rgba(0, 169, 244, 0.10)",
+                                }
+                              : undefined
+                          }
+                        >
+                          {spec}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-10 font-mono text-[14px] tracking-[0.08em] text-blue-soft uppercase">
+                  Not just what you know. Where you're strongest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. People who understand PHP */}
+        <section
+          className="bh-section border-t"
+          style={{ borderColor: "var(--line)" }}
+        >
           <div className="bh-container grid items-center gap-12 lg:grid-cols-[1.1fr_.9fr]">
             <div>
-              <p className="bh-eyebrow">02 / Representation</p>
+              <p className="bh-eyebrow">03 / Representation</p>
               <h2 className="bh-h2">Be represented by people who understand PHP.</h2>
               <p className="bh-lead max-w-[50ch]">
                 Not generic recruiters. Practitioners who have shipped PHP in production.
@@ -206,7 +311,7 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 4. You don't need to be looking */}
+        {/* 5. You don't need to be looking */}
         <section className="bh-section border-t" style={{ borderColor: "var(--line)" }}>
           <div className="bh-container">
             <div className="max-w-[820px]">
