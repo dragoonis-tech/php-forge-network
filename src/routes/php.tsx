@@ -197,7 +197,7 @@ function PhpNetworkPage() {
                 <p className="bh-label mb-6">Typical classification</p>
                 <div className="inline-flex">
                   <span
-                    className="border px-5 py-3 font-mono text-[18px] tracking-[0.05em] text-muted-ink line-through"
+                    className="border px-5 py-3 font-mono text-[18px] tracking-[0.05em] text-soft"
                     style={{ borderColor: "var(--line)" }}
                   >
                     PHP Developer
@@ -250,16 +250,19 @@ function PhpNetworkPage() {
                         "Symfony",
                         "Laravel",
                         "Architecture",
+                        "Full-stack",
                         "Platform",
                         "DevOps",
                         "Modernisation",
                         "Technical Leadership",
-                      ].map((spec, i) => (
+                        "WordPress",
+                        "Drupal",
+                      ].map((spec) => (
                         <span
                           key={spec}
                           className="bh-chip"
                           style={
-                            i === 3
+                            spec === "Architecture" || spec === "Full-stack"
                               ? {
                                   borderColor: "var(--blue)",
                                   color: "var(--blue-bright)",
