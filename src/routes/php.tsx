@@ -341,7 +341,7 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 5. PHP community / Paul Dragoonis */}
+        {/* 6. PHP community / Paul Dragoonis */}
         <section
           className="bh-section border-t"
           style={{ borderColor: "var(--line)", background: "var(--ink-2)" }}
@@ -357,7 +357,7 @@ function PhpNetworkPage() {
             </div>
 
             <div>
-              <p className="bh-eyebrow">04 / PHP community</p>
+              <p className="bh-eyebrow">05 / PHP community</p>
               <h2 className="bh-h2">Built inside the PHP community.</h2>
               <p className="bh-lead max-w-[52ch]">
                 ByteHire is led by Paul Dragoonis — part of the PHP community for over two decades.
@@ -379,7 +379,7 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 6. Final CTA */}
+        {/* 7. Final CTA */}
         <section
           className="bh-section bh-grid-bg relative overflow-hidden border-t"
           style={{ borderColor: "var(--line)" }}
@@ -392,7 +392,7 @@ function PhpNetworkPage() {
             }}
           />
           <div className="bh-container relative text-center">
-            <p className="bh-eyebrow justify-center">05 / Join</p>
+            <p className="bh-eyebrow justify-center">06 / Join</p>
             <h2 className="bh-h2 mx-auto max-w-[14ch] text-[clamp(2.2rem,5vw,4.4rem)]">
               Be part of the network.
             </h2>
