@@ -76,12 +76,12 @@ const STATES = [
 ];
 
 const CREDIBILITY = [
-  "PHP & open-source contributor",
-  "PHP-FIG member",
-  "PSR author",
-  "Public speaker",
-  "PHP conference organiser",
-  "20+ years in the PHP community",
+  "20+ Years in PHP",
+  "PHP & Open Source Contributor",
+  "PHP-FIG Member",
+  "PSR Author",
+  "Public Speaker",
+  "PHP Conference Organiser",
 ];
 
 function PhpNetworkPage() {
