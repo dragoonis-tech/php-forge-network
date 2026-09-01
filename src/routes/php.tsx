@@ -315,7 +315,7 @@ function PhpNetworkPage() {
         <section className="bh-section border-t" style={{ borderColor: "var(--line)" }}>
           <div className="bh-container">
             <div className="max-w-[820px]">
-              <p className="bh-eyebrow">03 / No pressure</p>
+              <p className="bh-eyebrow">04 / No pressure</p>
               <h2 className="bh-h2">You don't need to be looking.</h2>
               <p className="bh-lead max-w-[52ch]">
                 Wherever you are right now, the network works for you.
