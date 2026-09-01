@@ -47,13 +47,14 @@ function Cta({ className = "" }: { className?: string }) {
   );
 }
 
-const CV_KEYWORDS = ["PHP 8", "Laravel", "Symfony", "MySQL", "Docker", "REST", "Agile", "5+ years"];
+const CV_KEYWORDS = ["PHP", "Symfony", "Laravel", "MySQL", "REST APIs", "AWS", "Docker", "JavaScript"];
 
 const REAL_WORK = [
-  "Cut a legacy monolith into services without downtime",
-  "Took p95 from 900ms to 120ms under real traffic",
-  "Owned the payment path when it mattered most",
-  "Mentored a team through a major framework upgrade",
+  "Built customer-facing web applications",
+  "Shipped product features from idea to production",
+  "Designed APIs and integrations",
+  "Modernised legacy PHP applications",
+  "Architected maintainable application platforms",
 ];
 
 const STATES = [
