@@ -76,12 +76,12 @@ const STATES = [
 ];
 
 const CREDIBILITY = [
-  "PHP & open-source contributor",
-  "PHP-FIG member",
-  "PSR author",
-  "Public speaker",
-  "PHP conference organiser",
-  "20+ years in the PHP community",
+  "20+ Years in PHP",
+  "PHP & Open Source Contributor",
+  "PHP-FIG Member",
+  "PSR Author",
+  "Public Speaker",
+  "PHP Conference Organiser",
 ];
 
 function PhpNetworkPage() {
@@ -286,38 +286,73 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 4. People who understand PHP */}
+        {/* 3. Representation + Community */}
         <section
           className="bh-section border-t"
-          style={{ borderColor: "var(--line)" }}
+          style={{ borderColor: "var(--line)", background: "var(--ink-2)" }}
         >
-          <div className="bh-container grid items-center gap-12 lg:grid-cols-[1.1fr_.9fr]">
-            <div>
-              <p className="bh-eyebrow">03 / Representation</p>
-              <h2 className="bh-h2">Be represented by people who understand PHP.</h2>
-              <p className="bh-lead max-w-[50ch]">
-              You've spent years building your expertise. Be represented by people who know what it's worth.
-            </p>
-            <div className="mt-10">
-              <Cta />
-            </div>
+          <div className="bh-container">
+            {/* Claim */}
+            <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_.9fr]">
+              <div>
+                <p className="bh-eyebrow">03 / Representation + Community</p>
+                <h2 className="bh-h2">Be represented by people who understand PHP.</h2>
+                <p className="bh-lead max-w-[50ch]">
+                  You've spent years building your expertise. Be represented by people who know what it's worth.
+                </p>
+                <div className="mt-10">
+                  <Cta />
+                </div>
+              </div>
+
+              <div className="bh-panel relative overflow-hidden p-10 text-center md:p-16">
+                <img
+                  src={mark}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-8 -bottom-8 w-44 opacity-[0.06]"
+                />
+                <p className="relative text-[clamp(2rem,4.6vw,3.4rem)] leading-[1.05] font-semibold tracking-[-0.03em]">
+                  We speak <span className="text-blue">your language.</span>
+                </p>
+              </div>
             </div>
 
-            <div className="bh-panel relative overflow-hidden p-10 text-center md:p-16">
-              <img
-                src={mark}
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-8 -bottom-8 w-44 opacity-[0.06]"
-              />
-              <p className="relative text-[clamp(2rem,4.6vw,3.4rem)] leading-[1.05] font-semibold tracking-[-0.03em]">
-                We speak <span className="text-blue">your language.</span>
-              </p>
+            {/* Evidence */}
+            <div className="mt-24 grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+              <div className="bh-notch relative overflow-hidden border" style={{ borderColor: "var(--line)" }}>
+                <img
+                  src={paul}
+                  alt="Paul Dragoonis speaking at SymfonyCon Amsterdam"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <div>
+                <h3 className="bh-h3">Built from the PHP community.</h3>
+                <p className="bh-lead mt-4 max-w-[52ch]">
+                  Founded by Paul Dragoonis, PHP and open-source contributor, PHP-FIG member, PSR author, public speaker and PHP conference organiser.
+                </p>
+
+                <ul className="mt-10 grid gap-px sm:grid-cols-2" style={{ background: "var(--line)" }}>
+                  {CREDIBILITY.map((c) => (
+                    <li
+                      key={c}
+                      className="flex items-center gap-3 px-5 py-5 font-mono text-[14px] tracking-[0.05em] text-soft uppercase"
+                      style={{ background: "var(--surface)" }}
+                    >
+                      <span className="h-[6px] w-[6px] shrink-0 bg-blue" />
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* 5. You don't need to be looking */}
+        {/* 4. You don't need to be looking */}
         <section className="bh-section border-t" style={{ borderColor: "var(--line)" }}>
           <div className="bh-container">
             <div className="max-w-[820px]">
@@ -347,44 +382,6 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 6. PHP community / Paul Dragoonis */}
-        <section
-          className="bh-section border-t"
-          style={{ borderColor: "var(--line)", background: "var(--ink-2)" }}
-        >
-          <div className="bh-container grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
-            <div className="bh-notch relative overflow-hidden border" style={{ borderColor: "var(--line)" }}>
-              <img
-                src={paul}
-                alt="Paul Dragoonis speaking at SymfonyCon Amsterdam"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-
-            <div>
-              <p className="bh-eyebrow">05 / PHP community</p>
-              <h2 className="bh-h2">Built inside the PHP community.</h2>
-              <p className="bh-lead max-w-[52ch]">
-                ByteHire is led by Paul Dragoonis — part of the PHP community for over two decades.
-              </p>
-
-              <ul className="mt-10 grid gap-px sm:grid-cols-2" style={{ background: "var(--line)" }}>
-                {CREDIBILITY.map((c) => (
-                  <li
-                    key={c}
-                    className="flex items-center gap-3 px-5 py-5 font-mono text-[14px] tracking-[0.05em] text-soft uppercase"
-                    style={{ background: "var(--surface)" }}
-                  >
-                    <span className="h-[6px] w-[6px] shrink-0 bg-blue" />
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
         {/* 7. Final CTA */}
         <section
           className="bh-section bh-grid-bg relative overflow-hidden border-t"
@@ -398,7 +395,7 @@ function PhpNetworkPage() {
             }}
           />
           <div className="bh-container relative text-center">
-            <p className="bh-eyebrow justify-center">06 / Join</p>
+            <p className="bh-eyebrow justify-center">05 / Join</p>
             <h2 className="bh-h2 mx-auto max-w-[14ch] text-[clamp(2.2rem,5vw,4.4rem)]">
               Be part of the network.
             </h2>
