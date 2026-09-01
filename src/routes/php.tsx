@@ -395,7 +395,7 @@ function PhpNetworkPage() {
             }}
           />
           <div className="bh-container relative text-center">
-            <p className="bh-eyebrow justify-center">06 / Join</p>
+            <p className="bh-eyebrow justify-center">05 / Join</p>
             <h2 className="bh-h2 mx-auto max-w-[14ch] text-[clamp(2.2rem,5vw,4.4rem)]">
               Be part of the network.
             </h2>
