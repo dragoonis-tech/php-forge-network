@@ -143,15 +143,15 @@ function PhpNetworkPage() {
                   {CV_KEYWORDS.map((k) => (
                     <span
                       key={k}
-                      className="border px-3 py-2 font-mono text-[14px] tracking-[0.05em] text-muted-ink line-through"
+                      className="border px-3 py-2 font-mono text-[14px] tracking-[0.05em] text-soft"
                       style={{ borderColor: "var(--line)" }}
                     >
                       {k}
                     </span>
                   ))}
                 </div>
-                <p className="mt-8 text-[16px] text-muted-ink">
-                  Keywords prove familiarity, not capability.
+                <p className="mt-8 text-[16px] text-soft">
+                  This tells us what technologies you've used.
                 </p>
               </div>
 
