@@ -63,7 +63,7 @@ export function JoinForm() {
     return (
       <div className="bh-panel p-8 text-center md:p-14">
         <p className="bh-eyebrow justify-center">Registered</p>
-        <h3 className="bh-h3 text-[clamp(1.5rem,3vw,2.2rem)]">You're in the PHP Network.</h3>
+        <h3 className="bh-h3 text-[clamp(1.5rem,3vw,2.2rem)]">You're in the ByteHire PHP Network.</h3>
         <p className="bh-lead mx-auto max-w-[46ch]">
           Paul will be in touch personally. No spam, no CV blasting.
         </p>
@@ -219,7 +219,7 @@ export function JoinForm() {
 
       <div className="mt-10">
         <button type="submit" className="bh-button w-full md:w-auto md:min-w-[280px]">
-          <span>Join the PHP Network</span>
+          <span>Join the ByteHire PHP Network</span>
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path
               d="M3 10h13M11 5l5 5-5 5"
@@ -232,7 +232,7 @@ export function JoinForm() {
           </svg>
         </button>
         <p className="mt-5 font-mono text-[13px] tracking-[0.06em] text-muted-ink uppercase">
-          We'll review your experience and get to know where you fit within the network.
+          We'll review your experience and get to know where you fit within the ByteHire PHP Network.
         </p>
       </div>
     </form>

@@ -5,7 +5,7 @@ import { JoinForm } from "@/components/join-form";
 import paul from "@/assets/paul-founder.jpg";
 import mark from "@/assets/bytehire-mark.png";
 
-const TITLE = "PHP Network — ByteHire";
+const TITLE = "ByteHire PHP Network";
 const DESCRIPTION =
   "Your PHP experience is more than your CV. Join the ByteHire PHP Network and be represented by people who understand PHP.";
 
@@ -41,7 +41,7 @@ function Arrow() {
 function Cta({ className = "" }: { className?: string }) {
   return (
     <a href="#join" className={`bh-button ${className}`}>
-      <span>Join the PHP Network</span>
+      <span>Join the ByteHire PHP Network</span>
       <Arrow />
     </a>
   );
@@ -71,7 +71,7 @@ const STATES = [
   {
     id: "03",
     label: "Happy where I am",
-    line: "Stay in the network. We'll only reach out when it fits.",
+    line: "Stay in the ByteHire PHP Network. We'll only reach out when it fits.",
   },
 ];
 
@@ -387,7 +387,7 @@ function PhpNetworkPage() {
           <div className="bh-container">
             <div className="mx-auto mb-12 max-w-[720px] text-center">
               <p className="bh-eyebrow justify-center">Registration</p>
-              <h2 className="bh-h2 text-[clamp(1.9rem,3.6vw,3rem)]">Join the PHP Network</h2>
+              <h2 className="bh-h2 text-[clamp(1.9rem,3.6vw,3rem)]">Join the ByteHire PHP Network</h2>
               <p className="bh-lead">Two minutes. We'll take it from there.</p>
             </div>
             <div className="mx-auto max-w-[880px]">
