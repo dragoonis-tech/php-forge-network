@@ -148,29 +148,39 @@ export function JoinForm() {
           No pressure. We'll only reach out when there's something worth talking about.
         </p>
         <div className="grid gap-3">
-          {SITUATIONS.map((s) => (
-            <button
-              key={s}
-              type="button"
-              onClick={() => setSituation(s)}
-              aria-pressed={situation === s}
-              className="flex min-h-[56px] cursor-pointer items-center gap-4 border px-5 text-left text-[16px] transition-colors"
-              style={{
-                borderColor: situation === s ? "var(--blue)" : "var(--line)",
-                background: situation === s ? "rgba(0,169,244,0.1)" : "rgba(3,6,12,0.5)",
-                color: situation === s ? "var(--text)" : "var(--soft)",
-              }}
-            >
-              <span
-                className="inline-block h-[9px] w-[9px] shrink-0"
+          {SITUATIONS.map((s) => {
+            const active = situation === s;
+            return (
+              <label
+                key={s}
+                className="flex min-h-[56px] cursor-pointer items-center gap-4 border px-5 text-left text-[16px] transition-colors"
                 style={{
-                  background: situation === s ? "var(--blue)" : "transparent",
-                  outline: "1px solid var(--line-hi)",
+                  borderColor: active ? "var(--blue)" : "var(--line)",
+                  background: active ? "rgba(0,169,244,0.1)" : "rgba(3,6,12,0.5)",
+                  color: active ? "var(--text)" : "var(--soft)",
                 }}
-              />
-              {s}
-            </button>
-          ))}
+              >
+                <input
+                  type="radio"
+                  name="situation"
+                  value={s}
+                  checked={active}
+                  onChange={() => setSituation(s)}
+                  className="sr-only"
+                />
+                <span
+                  className="inline-block h-[18px] w-[18px] shrink-0 rounded-full border transition-colors"
+                  style={{
+                    borderColor: active ? "var(--blue)" : "var(--line-hi)",
+                    background: active ? "var(--blue)" : "transparent",
+                    boxShadow: active ? "inset 0 0 0 3px var(--ink-2)" : "none",
+                  }}
+                  aria-hidden="true"
+                />
+                {s}
+              </label>
+            );
+          })}
         </div>
       </fieldset>
 
