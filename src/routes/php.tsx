@@ -382,35 +382,6 @@ function PhpNetworkPage() {
           </div>
         </section>
 
-        {/* 7. Final CTA */}
-        <section
-          className="bh-section bh-grid-bg relative overflow-hidden border-t"
-          style={{ borderColor: "var(--line)" }}
-        >
-          <div
-            className="pointer-events-none absolute bottom-[-40%] left-1/2 h-[800px] w-[800px] -translate-x-1/2 rounded-full"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(0,169,244,0.18) 0%, transparent 65%)",
-            }}
-          />
-          <div className="bh-container relative text-center">
-            <p className="bh-eyebrow justify-center">05 / Join</p>
-            <h2 className="bh-h2 mx-auto max-w-[14ch] text-[clamp(2.2rem,5vw,4.4rem)]">
-              Be part of the network.
-            </h2>
-            <p className="bh-lead mx-auto max-w-[46ch] text-text">
-              Developers. Engineers. Architects. Technical leaders.
-            </p>
-            <div className="mt-10 flex justify-center">
-              <a href="#join" className="bh-button w-full sm:w-auto sm:min-w-[320px]">
-                <span>Join the ByteHire PHP Network</span>
-                <Arrow />
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Join form */}
         <section id="join" className="bh-section border-t pt-[80px]" style={{ borderColor: "var(--line)" }}>
           <div className="bh-container">
