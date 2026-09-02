@@ -49,7 +49,7 @@ export function SiteHeader() {
             aria-current="page"
             className="font-mono text-[14px] font-medium tracking-[0.06em] text-text uppercase"
           >
-            <span className="mr-[7px] text-blue">/</span>PHP Network
+            <span className="mr-[7px] text-blue">/</span>ByteHire PHP Network
           </span>
         </nav>
 
@@ -57,7 +57,7 @@ export function SiteHeader() {
           href="#join"
           className="bh-button bh-button-small ml-auto hidden lg:ml-0 lg:inline-flex"
         >
-          <span>Join the PHP Network</span>
+          <span>Join the ByteHire PHP Network</span>
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path
               d="M3 10h13M11 5l5 5-5 5"
@@ -103,7 +103,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="bh-button mt-4 w-full"
             >
-              <span>Join the PHP Network</span>
+              <span>Join the ByteHire PHP Network</span>
             </a>
           </nav>
         </div>

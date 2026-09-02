@@ -7,7 +7,7 @@ const LINKS = [
   { label: "For Candidates", href: "https://bytehire.io/candidates" },
   { label: "Live Jobs", href: "https://bytehire.io/open-roles" },
   { label: "About", href: "https://bytehire.io/about" },
-  { label: "PHP Network", href: "/php" },
+  { label: "ByteHire PHP Network", href: "/php" },
   { label: "Privacy Policy", href: "https://bytehire.io/privacy-policy" },
 ];
 
