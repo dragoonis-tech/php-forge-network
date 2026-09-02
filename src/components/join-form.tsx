@@ -1,20 +1,61 @@
 import { useState, type FormEvent } from "react";
 
-const SITUATIONS = [
-  "Actively looking",
-  "Open to opportunities",
-  "Not looking, but keep me in the network",
+const SENIORITY = [
+  "Junior",
+  "Mid-Level",
+  "Senior",
+  "Lead",
+  "Principal",
+  "Architect",
+  "Engineering Leadership",
 ];
 
-const STACKS = ["Symfony", "Laravel", "Other"];
+const SPECIALISMS = [
+  "Backend",
+  "Full-Stack",
+  "Symfony",
+  "Laravel",
+  "WordPress",
+  "Drupal",
+  "Architecture",
+  "DevOps / Infrastructure",
+  "Legacy Modernisation",
+  "Technical Leadership",
+];
+
+const SITUATIONS = [
+  "Actively searching",
+  "Open to something interesting",
+  "Happy where I am",
+];
+
+const chipActive = {
+  color: "#fff",
+  borderColor: "var(--blue)",
+  background: "rgba(0,169,244,0.16)",
+} as const;
 
 export function JoinForm() {
   const [sent, setSent] = useState(false);
-  const [stack, setStack] = useState("Symfony");
-  const [situation, setSituation] = useState(SITUATIONS[1]);
+  const [seniority, setSeniority] = useState<string | null>(null);
+  const [specialisms, setSpecialisms] = useState<string[]>([]);
+  const [situation, setSituation] = useState<string | null>(null);
+  const [cvName, setCvName] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  function toggleSpecialism(s: string) {
+    setSpecialisms((prev) =>
+      prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]
+    );
+  }
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!seniority) return setError("Please select your current level.");
+    if (specialisms.length === 0) return setError("Please select where you're strongest.");
+    if (!situation) return setError("Please tell us where you are right now.");
+    if (!cvName) return setError("Please upload your latest CV.");
+    setError(null);
     setSent(true);
   }
 
@@ -34,50 +75,42 @@ export function JoinForm() {
     <form onSubmit={onSubmit} className="bh-panel p-6 md:p-12">
       <div className="grid gap-6 md:grid-cols-2">
         <div className="bh-field">
-          <label htmlFor="first">First name</label>
+          <label htmlFor="first">First name*</label>
           <input id="first" name="first" required autoComplete="given-name" />
         </div>
         <div className="bh-field">
-          <label htmlFor="last">Last name</label>
+          <label htmlFor="last">Last name*</label>
           <input id="last" name="last" required autoComplete="family-name" />
         </div>
         <div className="bh-field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email*</label>
           <input id="email" name="email" type="email" required autoComplete="email" />
         </div>
         <div className="bh-field">
-          <label htmlFor="location">Location</label>
-          <input id="location" name="location" placeholder="City / country" />
+          <label htmlFor="location">Location*</label>
+          <input id="location" name="location" required placeholder="City / country" />
         </div>
-        <div className="bh-field">
-          <label htmlFor="linkedin">LinkedIn profile</label>
-          <input id="linkedin" name="linkedin" placeholder="linkedin.com/in/…" />
+        <div className="bh-field md:col-span-2">
+          <label htmlFor="linkedin">LinkedIn profile*</label>
+          <input id="linkedin" name="linkedin" required placeholder="linkedin.com/in/…" />
         </div>
-        <div className="bh-field">
-          <label htmlFor="role">Current role</label>
-          <input id="role" name="role" placeholder="Senior PHP Engineer" />
+        <div className="bh-field md:col-span-2">
+          <label htmlFor="title">Current or latest job title*</label>
+          <input id="title" name="title" required placeholder="Senior PHP Engineer" />
         </div>
       </div>
 
       <fieldset className="mt-9 border-0 p-0">
-        <legend className="bh-label mb-4">Primary PHP experience</legend>
+        <legend className="bh-label mb-4">What's your current level?*</legend>
         <div className="flex flex-wrap gap-3">
-          {STACKS.map((s) => (
+          {SENIORITY.map((s) => (
             <button
               key={s}
               type="button"
-              onClick={() => setStack(s)}
-              aria-pressed={stack === s}
+              onClick={() => setSeniority(s)}
+              aria-pressed={seniority === s}
               className="bh-chip min-h-[46px] cursor-pointer"
-              style={
-                stack === s
-                  ? {
-                      color: "#fff",
-                      borderColor: "var(--blue)",
-                      background: "rgba(0,169,244,0.16)",
-                    }
-                  : undefined
-              }
+              style={seniority === s ? chipActive : undefined}
             >
               {s}
             </button>
@@ -86,7 +119,34 @@ export function JoinForm() {
       </fieldset>
 
       <fieldset className="mt-9 border-0 p-0">
-        <legend className="bh-label mb-4">Current situation</legend>
+        <legend className="bh-label mb-2">Where are you strongest?*</legend>
+        <p className="mb-4 font-mono text-[13px] tracking-[0.06em] text-muted-ink uppercase">
+          Select all that apply.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {SPECIALISMS.map((s) => {
+            const active = specialisms.includes(s);
+            return (
+              <button
+                key={s}
+                type="button"
+                onClick={() => toggleSpecialism(s)}
+                aria-pressed={active}
+                className="bh-chip min-h-[46px] cursor-pointer"
+                style={active ? chipActive : undefined}
+              >
+                {s}
+              </button>
+            );
+          })}
+        </div>
+      </fieldset>
+
+      <fieldset className="mt-9 border-0 p-0">
+        <legend className="bh-label mb-2">Where are you right now?*</legend>
+        <p className="mb-4 font-mono text-[13px] tracking-[0.06em] text-muted-ink uppercase">
+          No pressure. We'll only reach out when there's something worth talking about.
+        </p>
         <div className="grid gap-3">
           {SITUATIONS.map((s) => (
             <button
@@ -115,14 +175,37 @@ export function JoinForm() {
       </fieldset>
 
       <div className="bh-field mt-9">
-        <label htmlFor="cv">
-          CV upload <span className="text-muted-ink">— optional</span>
+        <label htmlFor="next">
+          What are you interested in next? <span className="text-muted-ink">— optional</span>
         </label>
-        <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" />
+        <textarea
+          id="next"
+          name="next"
+          rows={4}
+          placeholder="Tell us what would make an opportunity worth talking about."
+        />
+      </div>
+
+      <div className="bh-field mt-9">
+        <label htmlFor="cv">Upload your latest CV*</label>
+        <input
+          id="cv"
+          name="cv"
+          type="file"
+          accept=".pdf,.doc,.docx"
+          required
+          onChange={(e) => setCvName(e.target.files?.[0]?.name ?? null)}
+        />
         <p className="mt-3 font-mono text-[13px] tracking-[0.06em] text-muted-ink uppercase">
-          Optional by design. Your experience is more than your CV.
+          This gives us the starting point. We'll look beyond it to understand the experience behind it.
         </p>
       </div>
+
+      {error && (
+        <p className="mt-8 font-mono text-[13px] tracking-[0.06em] uppercase" style={{ color: "#ff6b6b" }}>
+          {error}
+        </p>
+      )}
 
       <div className="mt-10">
         <button type="submit" className="bh-button w-full md:w-auto md:min-w-[280px]">
@@ -138,6 +221,9 @@ export function JoinForm() {
             />
           </svg>
         </button>
+        <p className="mt-5 font-mono text-[13px] tracking-[0.06em] text-muted-ink uppercase">
+          We'll review your experience and get to know where you fit within the network.
+        </p>
       </div>
     </form>
   );

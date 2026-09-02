@@ -417,7 +417,7 @@ function PhpNetworkPage() {
             <div className="mx-auto mb-12 max-w-[720px] text-center">
               <p className="bh-eyebrow justify-center">Registration</p>
               <h2 className="bh-h2 text-[clamp(1.9rem,3.6vw,3rem)]">Join the PHP Network</h2>
-              <p className="bh-lead">Two minutes. No CV required.</p>
+              <p className="bh-lead">Two minutes. We'll take it from there.</p>
             </div>
             <div className="mx-auto max-w-[880px]">
               <JoinForm />
