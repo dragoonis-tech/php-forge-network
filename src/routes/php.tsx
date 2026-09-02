@@ -91,7 +91,7 @@ function PhpNetworkPage() {
 
       <main id="main">
         {/* 1. Hero */}
-        <section className="bh-section bh-grid-bg relative overflow-hidden pt-[160px] md:pt-[200px]">
+        <section className="bh-section bh-grid-bg relative overflow-hidden pt-[160px] md:pt-[200px] pb-20 md:pb-24">
           <div
             className="pointer-events-none absolute top-[-30%] left-1/2 h-[900px] w-[900px] -translate-x-1/2 rounded-full"
             style={{
@@ -115,13 +115,6 @@ function PhpNetworkPage() {
               </a>
             </div>
 
-            <div className="mt-16 flex flex-wrap justify-center gap-2 md:gap-3">
-              {["Developers", "Engineers", "Architects", "Technical leaders"].map((t) => (
-                <span key={t} className="bh-chip">
-                  {t}
-                </span>
-              ))}
-            </div>
           </div>
         </section>
 
